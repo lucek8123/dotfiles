@@ -1,0 +1,38 @@
+$color: #1793d1;
+
+.audioSlider {
+  color: $color;
+}
+
+.audioSlider slider {
+  min-width: 15px;
+  min-height: 15px;
+
+  background-color: $color;
+  box-shadow: 0 0 0 0;
+}
+
+.audioSlider trough {
+  /* Set the background color */
+  color: #1793d1;
+  border-radius: 10px;
+  /* Add some padding */
+  min-width: 150px;
+  min-height: 8px;
+}
+
+.audioSlider highlight {  
+  background-color: $color;
+  background-image: none;
+  border-radius: 10px;
+  color: $color;
+}
+
+.audioLabel {
+  min-width: 40px;
+}
+
+.audio {
+  padding-left: 15px;
+  padding-right: 15px;
+}

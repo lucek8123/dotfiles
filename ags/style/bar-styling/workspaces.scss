@@ -1,0 +1,23 @@
+.workspaceButton {
+  box-shadow: none; 
+  background-image: none;
+}
+.workspaceLabel:hover {
+  opacity: 0.8;
+}
+
+.workspaceLabel {
+  min-width: 35px;
+  transition: all .2s ease-out;
+  /* padding: 5px 10px 5px 10px; */
+  border-radius: 20px;
+  background-color: #1793d1;
+}
+
+.active {
+  min-width: 50px;
+}
+
+.workspaces {
+  padding-right: 15px;
+}
