@@ -2,6 +2,7 @@
   box-shadow: none; 
   background-image: none;
 }
+
 .workspaceLabel:hover {
   opacity: 0.8;
 }
@@ -15,9 +16,9 @@
 }
 
 .active {
-  min-width: 50px;
+  min-width: 60px;
 }
 
 .workspaces {
-  padding-right: 15px;
+  padding-right: 30px;
 }

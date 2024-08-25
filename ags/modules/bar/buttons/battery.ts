@@ -11,6 +11,9 @@ const BatteryIcon = () => {
         icon: icon,
         className: "battery-icon"
     })
+    .hook(battery, (icon) => {
+        icon.toggleClassName("charging", battery.charging)
+    })
 }
 
 const BatteryLabel = () => {

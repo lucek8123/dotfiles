@@ -43,10 +43,10 @@
   background-color: #1793d1; }
 
 .active {
-  min-width: 50px; }
+  min-width: 60px; }
 
 .workspaces {
-  padding-right: 15px; }
+  padding-right: 30px; }
 
 .battery trough block {
   border-radius: 10px;
