@@ -1,30 +1,34 @@
-import Date from "./buttons/date"
-import Workspaces from "./buttons/workspaces"
-import Battery from "./buttons/battery"
-import Volume from "./buttons/volume"
-import MediaControls from "./buttons/media-controls"
+import ArchLogo from "./buttons/1-arch-logo"
+import Workspaces from "./buttons/2-workspaces"
+import NowPlaying from "./buttons/3-now-playing"
+import Date from "./buttons/4-date"
+import TrayIcons from "./buttons/5-tray-icons"
+import UpdateIcon from "./buttons/6-system-update"
+import Volume from "./buttons/7-volume"
+import Battery from "./buttons/8-battery"
 
 // User Widgets are declared here
 const LeftItems = [ 
+    ArchLogo(),
     Workspaces(),
-    MediaControls()
 ]
 
 const CenterItems = [
-
+    NowPlaying(),
 ]
 
 const RightItems = [
-    Battery(),
+    // TrayIcons(),
+    UpdateIcon(),
     Volume(),
+    Battery(),
     Date(),
 ]
 
 // Widget Groups are declared here
 const Left = () => {
     return Widget.Box({
-        vpack: "center",
-        vexpand: true,
+    //     hpack: "start",
         children: LeftItems,
     })
 }
@@ -45,11 +49,12 @@ const Right = () => {
 // Bar is declared here 
 export default (monitor: number = 0) => {
      return Widget.Window({
-          className: "bar",
           name: `bar${monitor}`,
+          className: "bar-window",
           exclusivity: "exclusive",
           anchor: ["top", "left", "right"],
           child: Widget.CenterBox({
+              className: "bar",
               css: "min-height: 2px;",
               start_widget: Left(),
               center_widget: Center(),

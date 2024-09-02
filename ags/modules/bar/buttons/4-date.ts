@@ -1,10 +1,10 @@
 const date = Variable("", {
-    poll: [1000, 'date "+%H:%M:%S %b"'],
+    poll: [1000, 'date "+%a, %d %b  %H:%M"'],
 })
 
 export default () => {
     return Widget.Label({
-        className: "time",
+        className: "date",
         label: date.bind()
     })
 }

@@ -1,18 +1,9 @@
 const battery = await Service.import("battery") 
 
 const BatteryIcon = () => {
-    const icon = Utils.merge([battery.bind("percent"), battery.bind("charging")], (p, charging) => {
-        const isCharging = charging ? "-charging" : ""
-
-        return `battery-level-${Math.floor(p / 10) * 10}${isCharging}-symbolic`
-    })
-
     return Widget.Icon({ 
-        icon: icon,
+        icon: battery.bind("icon_name"),
         className: "battery-icon"
-    })
-    .hook(battery, (icon) => {
-        icon.toggleClassName("charging", battery.charging)
     })
 }
 
@@ -43,7 +34,7 @@ export default () => {
         children: [
             BatteryIcon(),
             BatteryLabel(),
-            BatteryLevelBar(),
+            // BatteryLevelBar(),
         ],
     })
 }

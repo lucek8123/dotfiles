@@ -6,7 +6,7 @@ const WorkspaceButton = (buttonNumber: number) => {
     const ButtonLabel = () => {
         return Widget.Label({
             class_names: activeId.as(i => [i === buttonNumber ? "active" : "", "workspaceLabel"]),
-            label: `${buttonNumber}`,
+            label: `${buttonNumber}`
         })
     }
         

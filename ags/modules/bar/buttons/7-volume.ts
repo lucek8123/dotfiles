@@ -44,10 +44,11 @@ export default () => {
     return Widget.Box({
         spacing: 5,
         className: "audio",
+        hpack: "center",
         children: [
             AudioIcon(),
             AudioLabel(),
-            AudioSlider(),
+            // AudioSlider(),
         ]
     })
 }

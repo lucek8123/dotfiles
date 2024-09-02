@@ -1,73 +1,57 @@
-.audioSlider {
-  color: #1793d1; }
+.bar {
+  padding: 5px 5px; }
 
-.audioSlider slider {
-  min-width: 15px;
+* {
+  transition: all .2s ease-in;
+  font-family: "NotoSans Nerd Font";
   min-height: 15px;
-  background-color: #1793d1;
-  box-shadow: 0 0 0 0; }
+  /* min-width: 10px; */
+  font-size: 15px;
+  font-weight: bold; }
 
-.audioSlider trough {
-  /* Set the background color */
-  color: #1793d1;
-  border-radius: 10px;
-  /* Add some padding */
-  min-width: 150px;
-  min-height: 8px; }
+.arch-logo,
+.workspaceButton,
+.now-playing,
+.date,
+.tray-icons-box,
+.update-icon,
+.audio,
+.battery-box {
+  border: solid;
+  border-radius: 20px;
+  border-color: #57b1de;
+  border-width: 3px;
+  background-color: #181926; }
 
-.audioSlider highlight {
-  background-color: #1793d1;
-  background-image: none;
-  border-radius: 10px;
-  color: #1793d1; }
+.arch-logo,
+.workspaces,
+.now-playing,
+.date,
+.tray-icons-box,
+.update-icon,
+.audio,
+.battery-box {
+  margin: 0 5px; }
 
-.audioLabel {
-  min-width: 40px; }
-
-.audio {
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.workspaceButton {
-  box-shadow: none;
-  background-image: none; }
-
-.workspaceLabel:hover {
-  opacity: 0.8; }
+.arch-logo {
+  font-size: 25px;
+  color: #57b1de;
+  padding: 0 15px; }
 
 .workspaceLabel {
-  min-width: 35px;
-  transition: all .2s ease-out;
-  /* padding: 5px 10px 5px 10px; */
-  border-radius: 20px;
-  background-color: #1793d1; }
+  padding: 0px 15px; }
 
-.active {
-  min-width: 60px; }
+.workspaceLabel.active {
+  padding: 0px 25px; }
 
-.workspaces {
-  padding-right: 30px; }
-
-.battery trough block {
-  border-radius: 10px;
-  min-height: 8px; }
-
-.battery block.filled {
-  background-color: #1793d1; }
-
+/* .date { */
+/*   min-width: 300px; */
+/* } */
+.arch-logo,
+.now-playing,
+.tray-icons-box,
+.update-icon,
+.audio,
+.date,
 .battery-box {
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.media-button {
-  background-color: rgba(255, 255, 255, 0.12);
-  min-width: 300px;
-  border-radius: 20px;
-  padding-right: 20px;
-  padding-left: 20px; }
-
-.media-label {
-  font-size: 15px; }
-
-.time {
-  min-width: 100px; }
+  padding: 0 10px; }
