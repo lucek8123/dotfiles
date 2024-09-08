@@ -1,7 +1,10 @@
 const ArchLogo = () => {
-    return Widget.Label({
-       label: "󰣇",
-       className: "arch-logo"
+    return Widget.EventBox({
+        child: Widget.Label({
+           label: "󰣇",
+           className: "arch-logo"
+        }),
+        onPrimaryClick: () => Utils.exec("bash -c 'pkill wofi || wofi --show drun -i'"),
     })
 }
 

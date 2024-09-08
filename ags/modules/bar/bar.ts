@@ -18,7 +18,7 @@ const CenterItems = [
 ]
 
 const RightItems = [
-    // TrayIcons(),
+    TrayIcons(),
     UpdateIcon(),
     Volume(),
     Battery(),

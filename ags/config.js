@@ -7,7 +7,7 @@ const css = `./style.css`
 Utils.exec(`sassc ${scss} ${css}`)
 
 // Monitor scss directory 
-Utils.monitorFile("./style",
+Utils.monitorFile("./style/",
     function() {
         Utils.exec(`sassc ${scss} ${css}`)
         App.resetCss()
