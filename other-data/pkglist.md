@@ -8,10 +8,19 @@ btrfs-progs
 dhcpcd
 iwd
 bash-completion
+sbsigntools
 sudo
 refind
 man-db
 man-pages
+tree
+plymouth
+greetd
+greetd-tuigreet
+
+## Bluetooth
+bluez
+bluez-utils
 
 ## Graphics
 mesa-utils
@@ -40,8 +49,11 @@ hyprland
 hyprlock
 hyprpaper
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
 polkit
 brightnessctl
+wl-clipboard
+polkit-gnome
 
 ## Audio
 sof-firmware
@@ -55,12 +67,34 @@ helvum
 pamixer
 pavucontrol
 
-## Others 
-dua-cli
-flatpak
-chromium
+## AGS
+glib2-devel
+gobject-introspection
+gtk-layer-shell
+typescript
+sassc
+esbuild
+gjs
+
+## Daily applications 
 kitty
 nemo
 nemo-fileroller
 nemo-preview
-nemo-terminal
+yazi
+wofi
+thunderbird
+chromium
+zoxide
+bitwarden
+
+## Others 
+cups
+dua-cli
+btop
+foliate
+docker
+gparted
+fzf
+
+## Not sorted yet
