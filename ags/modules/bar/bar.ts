@@ -7,42 +7,34 @@ import UpdateIcon from "./buttons/6-system-update"
 import Volume from "./buttons/7-volume"
 import Battery from "./buttons/8-battery"
 
-// User Widgets are declared here
-const LeftItems = [ 
-    ArchLogo(),
-    Workspaces(),
-]
-
-const CenterItems = [
-    NowPlaying(),
-]
-
-const RightItems = [
-    TrayIcons(),
-    UpdateIcon(),
-    Volume(),
-    Battery(),
-    Date(),
-]
-
 // Widget Groups are declared here
-const Left = () => {
+const Left = (monitor: number) => {
     return Widget.Box({
-    //     hpack: "start",
-        children: LeftItems,
+        children: [ 
+            ArchLogo(),
+            Workspaces(monitor),
+        ]
     })
 }
 
-const Center = () => {
+const Center = (monitor: number) => {
     return Widget.Box({
-        children: CenterItems,
+        children: [
+            NowPlaying()
+        ]
     })
 }
 
-const Right = () => {
+const Right = (monitor: number) => {
     return Widget.Box({
         hpack: "end",
-        children: RightItems,
+        children: [
+            TrayIcons(),
+            UpdateIcon(),
+            Volume(),
+            Battery(),
+            Date(),
+        ]
     })
 }
 
@@ -56,9 +48,9 @@ export default (monitor: number = 0) => {
           child: Widget.CenterBox({
               className: "bar",
               css: "min-height: 2px;",
-              start_widget: Left(),
-              center_widget: Center(),
-              end_widget: Right(),
+              start_widget: Left(monitor),
+              center_widget: Center(monitor),
+              end_widget: Right(monitor),
           }),
      })
  }
