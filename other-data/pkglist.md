@@ -35,6 +35,8 @@ npm
 tree-sitter-cli
 nodejs
 unzip
+luarocks
+ripgrep
 
 ## Fonts
 noto-fonts
@@ -75,6 +77,7 @@ typescript
 sassc
 esbuild
 gjs
+upower
 
 ## Daily applications 
 kitty
@@ -98,3 +101,7 @@ gparted
 fzf
 
 ## Not sorted yet
+d-spy
+flatpak
+nss-mdns
+ntp
