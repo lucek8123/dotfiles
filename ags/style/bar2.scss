@@ -1,0 +1,71 @@
+.bar {
+  padding: 1px;
+  margin: 10px 10px 0px 10px;
+}
+
+* {
+  transition: all .2s ease-in-out;
+  font-family: "NotoSans Nerd Font";
+  min-height: 15px;
+  /* min-width: 10px; */
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.bar {
+  border: solid;
+  border-radius: 10px;
+  border-color: #57b1de; 
+  border-width: 3px;
+  background-color: #181926;
+}
+
+.workspaceLabel.active {
+  min-width: 40px;
+  /* font-size: 10px; */
+}
+
+.workspaceLabel {
+   font-size: 12px;
+   min-width: 25px;
+   min-height: 25px;
+   background-color: skyblue;
+   border-radius: 30px;
+}
+
+
+.arch-logo,
+.workspaces,
+.now-playing,
+.date,
+.tray-icons-box,
+.update-icon,
+.audio,
+.battery-box {
+  margin: 0 10px;
+}
+
+.arch-logo {
+  font-size: 25px;
+  color: #57b1de;
+  /* padding: 0 15px; */
+}
+
+/* .workspaceLabel { */
+/*   padding: 0px 15px; */
+/* } */
+/**/
+/* .workspaceLabel.active { */
+/*   padding: 0px 25px; */
+/* } */
+/**/
+/* .arch-logo, */
+/* .now-playing, */
+/* .tray-icons-box, */
+/* .update-icon, */
+/* .audio,  */
+/* .date, */
+/* .battery-box { */
+/*   padding: 0 10px; */
+/* } */
+
