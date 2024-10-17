@@ -10,15 +10,18 @@ import Battery from "./buttons/8-battery"
 // Widget Groups are declared here
 const Left = (monitor: number) => {
     return Widget.Box({
+        className: "bar-left",
+        hpack: "start",
         children: [ 
             ArchLogo(),
-            Workspaces(monitor),
+            Workspaces(),
         ]
     })
 }
 
 const Center = (monitor: number) => {
     return Widget.Box({
+        className: "bar-middle",
         children: [
             NowPlaying()
         ]
@@ -27,6 +30,7 @@ const Center = (monitor: number) => {
 
 const Right = (monitor: number) => {
     return Widget.Box({
+        className: "bar-right",
         hpack: "end",
         children: [
             TrayIcons(),
