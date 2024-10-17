@@ -6,7 +6,8 @@ const WorkspaceButton = (buttonNumber: number) => {
     const ButtonLabel = () => {
         return Widget.Label({
             class_names: activeId.as(i => [i === buttonNumber ? "active" : "", "workspaceLabel"]),
-            label: `${buttonNumber}`
+            label: `${buttonNumber}`,
+            vpack: "center",
         })
     }
         
@@ -14,7 +15,6 @@ const WorkspaceButton = (buttonNumber: number) => {
         className: "workspaceButton",
         onPrimaryClick: () => hyprland.messageAsync(`dispatch workspace ${buttonNumber}`),
         child: ButtonLabel(),
-        vexpand: false,
     })
 }
 
