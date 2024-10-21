@@ -51,6 +51,8 @@ const Right = (monitor: number) => {
             Volume(),
             Battery(),
             Network(),
+            Seperator(),
+            Date(),
         ]
     })
 }
