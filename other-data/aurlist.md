@@ -2,13 +2,9 @@ nvim-packer-git
 opentabletdriver-git
 swift-bin
 trashy
-yay-bin
-yay-bin-debug
 laptop-mode-tools
 nvidia-prime-rtd3pm
 aylurs-gtk-shell
-aylurs-gtk-shell-debug
 powerstat
 cider-bin
-cider-bin-debug
 hardcode-tray
