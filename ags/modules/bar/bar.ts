@@ -17,6 +17,7 @@ const Left = (monitor: number) => {
         className: "bar-left",
         // hpack: "start",
         vpack: "start",
+        hpack: "center",
         vertical: true,
         children: [ 
             ArchLogo(),
@@ -32,6 +33,7 @@ const Center = (monitor: number) => {
             // NowPlaying()
         ],
         vpack: "start",
+        hpack: "center",
         vertical: true,
     })
 }
@@ -46,6 +48,7 @@ const Right = (monitor: number) => {
             UpdateIcon(),
             Seperator(),
             Volume(),
+            Battery(),
         ]
     })
 }

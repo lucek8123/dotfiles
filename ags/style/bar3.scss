@@ -1,5 +1,6 @@
 .bar {
   padding: 1px;
+  min-width: 45px;
 }
 
 * {
@@ -21,20 +22,17 @@
 .workspaceLabel.active {
   /* min-width: 40px; */
   border-color: white;
-  min-height: 70px;
+  min-height: 90px;
 }
 
 .workspaceLabel {
-   min-height: 5px;
-   min-width: 5px;
+   min-height: 15px;
+   min-width: 15px;
    font-size: 0px;
-   padding: 5px;
    border-radius: 30px;
    border-width: 2.5px;
    border-color: gray;
    border-style: solid;
-   margin-left: 5px;
-   margin-right: 5px;
 }
 
 .arch-logo,
@@ -45,7 +43,7 @@
 .update-icon,
 .audio,
 .battery-box {
-  margin: 5px;
+  margin: 5px 0px;
 }
 
 .arch-logo {
@@ -53,6 +51,7 @@
   color: #57b1de;
 }
 
+.battery-label,
 .audioLabel {
   font-size: 10px;
 }
@@ -60,6 +59,6 @@
 separator {
   background: gray;
   min-height: 1px;
-  margin-left: 5px;
-  margin-right: 5px;
+  /* margin-left: 5px; */
+  /* margin-right: 5px; */
 }

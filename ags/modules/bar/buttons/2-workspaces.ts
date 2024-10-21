@@ -8,6 +8,7 @@ const WorkspaceButton = (buttonNumber: number) => {
             class_names: activeId.as(i => [i === buttonNumber ? "active" : "", "workspaceLabel"]),
             label: `${buttonNumber}`,
             hexpand: false,
+            hpack: "start",
         })
     }
         
