@@ -6,6 +6,7 @@ import TrayIcons from "./buttons/5-tray-icons"
 import UpdateIcon from "./buttons/6-system-update"
 import Volume from "./buttons/7-volume"
 import Battery from "./buttons/8-battery"
+import Network from "./buttons/network"
 
 const Seperator = () => {
     return Widget.Separator({vertical: true})
@@ -49,6 +50,7 @@ const Right = (monitor: number) => {
             Seperator(),
             Volume(),
             Battery(),
+            Network(),
         ]
     })
 }
