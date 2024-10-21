@@ -1,6 +1,5 @@
 .bar {
   padding: 1px;
-  margin: 10px 10px 0px 10px;
 }
 
 * {
@@ -11,9 +10,7 @@
   font-weight: bold;
 }
 
-.bar-left,
-.bar-middle,
-.bar-right {
+.bar {
   border: solid;
   border-radius: 10px;
   border-color: #57b1de; 
@@ -22,16 +19,25 @@
 }
 
 .workspaceLabel.active {
-  min-width: 40px;
+  /* min-width: 40px; */
+  border-color: white;
+  min-height: 70px;
 }
 
 .workspaceLabel {
-   min-height: 25px;
-   min-width: 25px;
-   font-size: 12px;
-   background-color: skyblue;
+   min-height: 5px;
+   min-width: 5px;
+   /* min-width: 25px; */
+   font-size: 0px;
+   /* background-color: skyblue; */
+   /* min-height: 25px; */
+   padding: 5px;
    border-radius: 30px;
-   padding: 0px;
+   border-width: 2.5px;
+   border-color: gray;
+   border-style: solid;
+   margin-left: 5px;
+   margin-right: 5px;
 }
 
 .arch-logo,
@@ -42,30 +48,21 @@
 .update-icon,
 .audio,
 .battery-box {
-  margin: 0 10px;
+  margin: 5px;
 }
 
 .arch-logo {
   font-size: 25px;
   color: #57b1de;
-  /* padding: 0 15px; */
 }
 
-/* .workspaceLabel { */
-/*   padding: 0px 15px; */
-/* } */
-/**/
-/* .workspaceLabel.active { */
-/*   padding: 0px 25px; */
-/* } */
-/**/
-/* .arch-logo, */
-/* .now-playing, */
-/* .tray-icons-box, */
-/* .update-icon, */
-/* .audio,  */
-/* .date, */
-/* .battery-box { */
-/*   padding: 0 10px; */
-/* } */
+.audioLabel {
+  font-size: 10px;
+}
 
+separator {
+  background: gray;
+  min-height: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+}

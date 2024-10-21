@@ -7,14 +7,19 @@ import UpdateIcon from "./buttons/6-system-update"
 import Volume from "./buttons/7-volume"
 import Battery from "./buttons/8-battery"
 
+const Seperator = () => {
+    return Widget.Separator({vertical: true})
+}
+
 // Widget Groups are declared here
 const Left = (monitor: number) => {
     return Widget.Box({
         className: "bar-left",
-        hpack: "start",
+        // hpack: "start",
+        vpack: "start",
+        vertical: true,
         children: [ 
             ArchLogo(),
-            Workspaces(),
         ]
     })
 }
@@ -23,21 +28,24 @@ const Center = (monitor: number) => {
     return Widget.Box({
         className: "bar-middle",
         children: [
-            NowPlaying()
-        ]
+            Workspaces(),
+            // NowPlaying()
+        ],
+        vpack: "start",
+        vertical: true,
     })
 }
 
 const Right = (monitor: number) => {
     return Widget.Box({
         className: "bar-right",
-        hpack: "end",
+        hpack: "center",
+        vpack: "end",
+        vertical: true,
         children: [
-            TrayIcons(),
             UpdateIcon(),
+            Seperator(),
             Volume(),
-            Battery(),
-            Date(),
         ]
     })
 }
@@ -48,13 +56,13 @@ export default (monitor: number = 0) => {
           name: `bar${monitor}`,
           className: "bar-window",
           exclusivity: "exclusive",
-          anchor: ["top", "left", "right"],
+          anchor: ["left", "top", "bottom"],
           child: Widget.CenterBox({
               className: "bar",
-              css: "min-height: 2px;",
               start_widget: Left(monitor),
               center_widget: Center(monitor),
               end_widget: Right(monitor),
+              vertical: true,
           }),
      })
  }
