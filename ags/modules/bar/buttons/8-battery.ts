@@ -31,6 +31,7 @@ export default () => {
         className: "battery-box",
         visible: battery.bind("available"),
         spacing: 5,
+        vertical: true,
         children: [
             BatteryIcon(),
             BatteryLabel(),
