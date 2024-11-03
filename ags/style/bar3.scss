@@ -7,8 +7,6 @@
   transition: all .2s ease-in-out;
   font-family: "NotoSans Nerd Font";
   /* min-width: 10px; */
-  font-size: 15px;
-  font-weight: bold;
 }
 
 .bar {
@@ -56,7 +54,6 @@
 }
 
 .date {
-
   background: #51576d;
   padding: 5px;
   border-radius: 5px;
@@ -64,15 +61,18 @@
 
 .date-minute {
   font-size: 14px;
+  font-weight: bold;
 }
 
 .date-hour {
   font-size: 17px;
+  font-weight: bold;
 }
 
 .battery-label,
 .audioLabel {
   font-size: 10px;
+  font-weight: bold;
 }
 
 separator {
