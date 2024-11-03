@@ -1,0 +1,14 @@
+{
+    "./chromium-flags.conf": "~/.config/chromium-flags.conf",
+    "./electron-flags.conf": "~/.config/electron-flags.conf",
+
+    "./ags": "~/.config/ags",
+    "./hypr": "~/.config/hypr",
+    "./nvim": "~/.config/nvim",
+    "./wofi": "~/.config/wofi",
+    "./yazi": "~/.config/yazi",
+    "./wofi": "~/.config/wofi",
+    "./gtk-3.0": "~/.config/gtk-3.0/",
+    "./solaar": "~/.config/solaar",
+    "./wallpapers/": "~/.config/wallpapers/",
+}
