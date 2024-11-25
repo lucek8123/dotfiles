@@ -76,13 +76,16 @@ local plugins = {
         "rcarriga/nvim-dap-ui",
         dependencies = {
             "mfussenegger/nvim-dap",
-            "nvim-neotest/nvim-nio"
+            "nvim-neotest/nvim-nio",
+            "stevearc/overseer.nvim",
+            "jay-babu/mason-nvim-dap.nvim",
         }
     },
 
     -- HTML autotag
     { "windwp/nvim-ts-autotag" },
     { "m4xshen/autoclose.nvim" },
+
 }
 
 
