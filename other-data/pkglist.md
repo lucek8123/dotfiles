@@ -17,14 +17,17 @@ tree
 plymouth
 greetd
 greetd-tuigreet
+networkmanager
 
 ## Bluetooth
 bluez
 bluez-utils
 
 ## Graphics
+cuda
+nvidia
+nvidia-container-toolkit
 mesa-utils
-nvidia-dkms
 nvidia-prime
 vulkan-intel
 
@@ -105,3 +108,13 @@ d-spy
 flatpak
 nss-mdns
 ntp
+easyeffects
+gdb
+intel-media-driver
+lightdm
+mtools
+net-tools
+tlp
+tmux
+virt-manager
+wev

@@ -1,4 +1,3 @@
-nvim-packer-git
 opentabletdriver-git
 swift-bin
 trashy
@@ -7,4 +6,6 @@ nvidia-prime-rtd3pm
 aylurs-gtk-shell
 powerstat
 cider-bin
-hardcode-tray
+optimus-manager-git
+quickemu
+visual-studio-code-bin
