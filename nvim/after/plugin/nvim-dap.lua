@@ -45,5 +45,24 @@ dap.listeners.before.event_exited.dapui_config = function()
 end
 
 -- Run Prelaunch Tasks
-require('overseer').setup()
+local overseer = require('overseer')
+overseer.setup()
+
+local hook = function(task_defn, util)
+    util.add_component(task_defn, { "on_complete_notify", statuses = { "SUCCESS" } })
+
+    util.add_component(task_defn, { "on_output_quickfix",
+        close = true,
+        open = true,
+        open_on_exit = "failure"
+    })
+
+    util.add_component(task_defn, {
+        'on_result_diagnostics_quickfix',
+        close = true,
+        open = true
+    })
+end
+
+overseer.add_template_hook(nil, hook)
 
