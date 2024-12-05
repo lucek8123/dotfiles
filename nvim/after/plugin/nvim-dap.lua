@@ -13,9 +13,9 @@ dap.adapters.codelldb = {
 	},
 }
 
-
 -- General keymaps (running, stepping over/into/out)
 vim.keymap.set('n', '<leader>dc', function() dap.continue() end)
+vim.keymap.set('n', '<leader>dq', function() dap.disconnect() end)
 vim.keymap.set('n', '<F5>', function() dap.continue() end)
 vim.keymap.set('n', '<F10>', function() dap.step_over() end)
 vim.keymap.set('n', '<F11>', function() dap.step_into() end)
