@@ -47,6 +47,8 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ttf-noto-nerd
+ttf-fira-sans
+ttf-iosevka-nerd
 
 ## Hyprland 
 hypridle
@@ -59,6 +61,13 @@ polkit
 brightnessctl
 wl-clipboard
 polkit-gnome
+
+## KDE
+kde-applications-meta
+aspell
+aspell-en
+aspell-pl
+qt6ct
 
 ## Audio
 sof-firmware
@@ -83,16 +92,18 @@ gjs
 upower
 
 ## Daily applications 
+solaar
 kitty
 nemo
+firefox
 nemo-fileroller
 nemo-preview
 yazi
 wofi
 thunderbird
-chromium
 zoxide
 bitwarden
+nextcloud-client
 
 ## Others 
 cups
@@ -118,3 +129,34 @@ tlp
 tmux
 virt-manager
 wev
+libreoffice-fresh
+playerctl
+dnsmasq
+efitools
+fwupd
+glfw
+grim
+kvantum
+ldns
+lsp-plugins
+meson
+nmap
+packagekit
+papirus-icon-theme
+plasma-meta
+python-click
+python-click-aliases
+python-tomlkit
+rpi-imager
+slurp
+speech-dispatcher
+speedtest-cli
+system-config-printer
+vala
+chromium
+gvfs-afc
+gvfs-gphoto2
+kimageformats
+maliit-keyboard
+openssl-1.1
+usbmuxd
