@@ -48,6 +48,7 @@ end
 local overseer = require('overseer')
 overseer.setup()
 
+-- show what went wrong on build
 local hook = function(task_defn, util)
     util.add_component(task_defn, { "on_complete_notify", statuses = { "SUCCESS" } })
 
