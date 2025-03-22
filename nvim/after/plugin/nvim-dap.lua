@@ -30,6 +30,9 @@ vim.keymap.set('n', '<Leader>lb', function() dap.set_breakpoint(nil, nil, vim.fn
 vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end)
 vim.keymap.set('n', '<Leader>dl', function() dap.run_last() end)
 
+-- Opening/Closing dap-ui
+vim.keymap.set('n', '<Leader>du', function() dapui.toggle() end)
+
 -- Auto open nvim-dap-ui when debugging starts
 dap.listeners.before.attach.dapui_config = function()
   dapui.open()
@@ -37,16 +40,30 @@ end
 dap.listeners.before.launch.dapui_config = function()
   dapui.open()
 end
-dap.listeners.before.event_terminated.dapui_config = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited.dapui_config = function()
-  dapui.close()
-end
+-- dap.listeners.before.event_terminated.dapui_config = function()
+--   dapui.close()
+-- end
+-- dap.listeners.before.event_exited.dapui_config = function()
+--   dapui.close()
+-- end
 
 -- Run Prelaunch Tasks
 local overseer = require('overseer')
-overseer.setup()
+overseer.setup({
+    templates = { "builtin", "user.olympics_build", "user.olympics_clean" }
+})
+
+dap.configurations.cpp = {
+    {
+        name = "Olympics Launch",
+        type = "codelldb",
+        request = "launch",
+
+        preLaunchTask = "olympics_build",
+        postDebugTask = "olympics_clean",
+        program = "${fileDirname}/${fileBasenameNoExtension}"
+    },
+}
 
 -- show what went wrong on build
 local hook = function(task_defn, util)
