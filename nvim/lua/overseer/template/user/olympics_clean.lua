@@ -1,7 +1,7 @@
 return {
   name = "olympics_clean",
   builder = function()
-    local output = vim.fn.expand("%:r")
+    local output = vim.fn.expand("%:r") .. ".out"
     return {
       cmd = { "rm" },
       args = { output },

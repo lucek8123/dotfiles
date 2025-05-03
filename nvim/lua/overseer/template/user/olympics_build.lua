@@ -4,7 +4,8 @@ return {
   builder = function()
     -- Full path to current file (see :help expand())
     local file = vim.fn.expand("%:p")
-    local output = vim.fn.expand("%:r")
+    local output = vim.fn.expand("%:r") .. ".out"
+    print(output)
     return {
       cmd = { "g++" },
       args = { "-g", file, "-o", output },

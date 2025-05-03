@@ -61,7 +61,7 @@ dap.configurations.cpp = {
 
         preLaunchTask = "olympics_build",
         postDebugTask = "olympics_clean",
-        program = "${fileDirname}/${fileBasenameNoExtension}"
+        program = "${fileDirname}/${fileBasenameNoExtension}.out"
     },
 }
 
