@@ -24,3 +24,8 @@ zen-browser-avx2-bin
 anki-bin
 kopia-bin
 kopia-ui-bin
+gowall
+kando-bin
+mkinitcpio-firmware
+tplay-git
+ttf-comic-sans
