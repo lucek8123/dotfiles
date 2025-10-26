@@ -8,7 +8,7 @@ return {
     print(output)
     return {
       cmd = { "g++" },
-      args = { "-g", file, "-o", output },
+      args = { "-std=c++20", "-g", file, "-o", output },
       components = { { "on_output_quickfix", open = true }, "default" },
     }
   end,

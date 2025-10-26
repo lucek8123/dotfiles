@@ -51,6 +51,10 @@ require('mason-lspconfig').setup({
   },
 })
 
+require("lspconfig").qmlls.setup {
+  cmd = {"qmlls6"}
+}
+
 -- Mason install debugger adapters 
 require("mason-nvim-dap").setup({
     ensure_installed = { "codelldb" }
