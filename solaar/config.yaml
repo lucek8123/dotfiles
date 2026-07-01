@@ -1,11 +1,5 @@
-- 1.1.13
+- 1.1.20
 - _NAME: K380 for Mac
-  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
-    thumb-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi, dpi_extended, speed-change, backlight, backlight_level,
-    backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control, rgb_zone_,
-    brightness_control, per-key-lighting, reprogrammable-keys, persistent-remappable-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led,
-    multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
-  _battery: 4096
   _modelId: B36200000000
   _sensitive: {divert-keys: false, hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
   _unitId: F9000000
@@ -14,33 +8,35 @@
   divert-keys: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 13: 0, 199: 0, 200: 0, 224: 0, 225: 0}
   fn-swap: true
 - _NAME: MX Master 3S
-  _absent: [hi-res-scroll, lowres-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi_extended, speed-change, backlight,
-    backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control,
-    rgb_zone_, brightness_control, per-key-lighting, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys,
-    m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
+  _absent: [hi-res-scroll, lowres-scroll-mode, scroll-ratchet-torque, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi_extended,
+    speed-change, backlight, backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control,
+    led_zone_, rgb_control, rgb_zone_, per-key-lighting, brightness_control, rgb_idle_effect, rgb_idle_timeout, rgb_sleep_timeout, rgb_startup_animation,
+    rgb_shutdown_animation, fn-swap, persistent-remappable-keys, disable-keyboard-keys, force-sensing, crown-smooth, divert-crown, divert-gkeys, m-key-leds,
+    mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, analog-button-tuning, haptic-level, haptic-play, sidetone, equalizer,
+    adc_power_management, headset-eco-mode, headset-do-not-disturb, headset-mic-mute, headset-mic-snr, headset-ai-nr, headset-ai-nr-level, headset-sidetone,
+    headset-mic-gain, headset-mix-balance, headset-auto-sleep, headset-onboard-eq, headset-eq-active-preset, headset-advanced-eq, headset_led_control, headset-onboard-effect,
+    headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown, headset-signature-passive, logivoice-nr-state, logivoice-ng-state,
+    logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state]
   _battery: 4100
+  _config_cookie: [241, 181]
   _modelId: B03400000000
-  _sensitive: {divert-keys: false, dpi: false, hires-scroll-mode: false, hires-smooth-invert: false, hires-smooth-resolution: false, reprogrammable-keys: false,
+  _sensitive: {divert-keys: false, dpi: true, hires-scroll-mode: true, hires-smooth-invert: false, hires-smooth-resolution: true, reprogrammable-keys: false,
     smart-shift: false}
+  _serial: CD3F86A9
   _unitId: CD3F86A9
+  _wpid: B034
   change-host: null
   divert-keys: {82: 0, 86: 0, 195: 2, 196: 0}
-  dpi: 1000
+  dpi: 2000
   hires-scroll-mode: false
   hires-smooth-invert: false
-  hires-smooth-resolution: true
+  hires-smooth-resolution: false
   reprogrammable-keys: {80: 80, 81: 81, 82: 82, 83: 83, 86: 86, 195: 195, 196: 196}
   scroll-ratchet: 2
   smart-shift: 10
   thumb-scroll-invert: false
   thumb-scroll-mode: false
 - _NAME: K380 for Mac
-  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
-    thumb-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi, dpi_extended, speed-change, backlight, backlight_level,
-    backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control, rgb_zone_,
-    brightness_control, per-key-lighting, reprogrammable-keys, persistent-remappable-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led,
-    multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
-  _battery: 4096
   _modelId: B36200000000
   _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
   _unitId: D9000000
@@ -49,12 +45,6 @@
   divert-keys: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 13: 0, 199: 0, 200: 0, 224: 0, 225: 0}
   fn-swap: true
 - _NAME: K380 for Mac
-  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
-    thumb-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi, dpi_extended, speed-change, backlight, backlight_level,
-    backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control, rgb_zone_,
-    brightness_control, per-key-lighting, reprogrammable-keys, persistent-remappable-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led,
-    multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
-  _battery: 4096
   _modelId: B36200000000
   _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
   _unitId: D1000000
