@@ -45,6 +45,7 @@ export default () => {
         spacing: 5,
         className: "audio",
         hpack: "center",
+        vertical: true,
         children: [
             AudioIcon(),
             AudioLabel(),

@@ -17,14 +17,17 @@ tree
 plymouth
 greetd
 greetd-tuigreet
+networkmanager
 
 ## Bluetooth
 bluez
 bluez-utils
 
 ## Graphics
+cuda
+nvidia
+nvidia-container-toolkit
 mesa-utils
-nvidia-dkms
 nvidia-prime
 vulkan-intel
 
@@ -44,6 +47,8 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ttf-noto-nerd
+ttf-fira-sans
+ttf-iosevka-nerd
 
 ## Hyprland 
 hypridle
@@ -56,6 +61,13 @@ polkit
 brightnessctl
 wl-clipboard
 polkit-gnome
+
+## KDE
+kde-applications-meta
+aspell
+aspell-en
+aspell-pl
+qt6ct
 
 ## Audio
 sof-firmware
@@ -80,16 +92,18 @@ gjs
 upower
 
 ## Daily applications 
+solaar
 kitty
 nemo
+firefox
 nemo-fileroller
 nemo-preview
 yazi
 wofi
 thunderbird
-chromium
 zoxide
 bitwarden
+nextcloud-client
 
 ## Others 
 cups
@@ -105,3 +119,85 @@ d-spy
 flatpak
 nss-mdns
 ntp
+easyeffects
+gdb
+intel-media-driver
+lightdm
+mtools
+net-tools
+tlp
+tmux
+virt-manager
+wev
+libreoffice-fresh
+playerctl
+dnsmasq
+efitools
+fwupd
+glfw
+grim
+kvantum
+ldns
+lsp-plugins
+meson
+nmap
+packagekit
+papirus-icon-theme
+plasma-meta
+python-click
+python-click-aliases
+python-tomlkit
+rpi-imager
+slurp
+speech-dispatcher
+speedtest-cli
+system-config-printer
+vala
+chromium
+gvfs-afc
+gvfs-gphoto2
+kimageformats
+maliit-keyboard
+openssl-1.1
+usbmuxd
+bind
+cups-pdf
+discord
+docker-compose
+dotnet-runtime-8.0
+evtest
+exfat-utils
+fastfetch
+fd
+fish
+iperf
+layer-shell-qt5
+lazygit
+libappindicator-gtk3
+libhandy
+lvm2
+networkmanager-openvpn
+nvtop
+obs-studio
+picard
+prismlauncher
+progress
+pyenv
+python-keyring
+python-pip
+python-pytorch-opt-rocm
+python-torchvision
+qbittorrent
+qemu-user-static
+reflector
+sbctl
+signal-desktop
+strawberry
+testdisk
+thefuck
+tk
+uv
+uwsm
+v4l2loopback-dkms
+vim
+wol

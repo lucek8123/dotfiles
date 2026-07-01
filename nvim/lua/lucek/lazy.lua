@@ -76,13 +76,53 @@ local plugins = {
         "rcarriga/nvim-dap-ui",
         dependencies = {
             "mfussenegger/nvim-dap",
-            "nvim-neotest/nvim-nio"
+            "nvim-neotest/nvim-nio",
+            "stevearc/overseer.nvim",
+            "jay-babu/mason-nvim-dap.nvim",
         }
     },
 
     -- HTML autotag
     { "windwp/nvim-ts-autotag" },
     { "m4xshen/autoclose.nvim" },
+
+    -- Live Server
+    {
+        'barrett-ruth/live-server.nvim',
+        build = 'npm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
+    },
+
+    -- Auto colorscheme
+    {
+        "f-person/auto-dark-mode.nvim",
+        opts = {
+            set_dark_mode = function()
+                ColorMyPencils("catppuccin-macchiato")
+            end,
+            set_light_mode = function()
+                ColorMyPencils("catppuccin-latte")
+            end,
+            update_interval = 3000,
+            fallback = "dark"
+        }
+    }
+
+
+    -- {
+    --     'linux-cultist/venv-selector.nvim',
+    --     dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap-python' },
+    --     opts = { },
+    --     event = 'VeryLazy', -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
+    --     keys = {
+    --         -- Keymap to open VenvSelector to pick a venv.
+    --         { '<leader>vs', '<cmd>VenvSelect<cr>' },
+    --         -- Keymap to retrieve the venv from a cache (the one previously used for the same project directory).
+    --         { '<leader>vc', '<cmd>VenvSelectCached<cr>' },
+    --     },
+    -- }
+
 }
 
 

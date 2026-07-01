@@ -1,0 +1,14 @@
+# Some default env vars.
+export XCURSOR_SIZE=24
+export QT_QPA_PLATFORMTHEME=qt6ct # change to qt6ct if you have that
+export TERM=kitty
+
+export AQ_DRM_DEVICES=/dev/dri/by-driver/intel-card
+
+# Nvidia support 
+# export LIBVA_DRIVER_NAME=nvidia
+# export XDG_SESSION_TYPE=wayland
+# export GBM_BACKEND=nvidia-drm
+# export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
+# export WLR_NO_HARDWARE_CURSORS=1

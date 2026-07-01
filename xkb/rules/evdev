@@ -1,0 +1,6 @@
+// Mandatory to extend the
+! include %S/evdev
+
+! option     = symbols
+  custom:foo = +custom(bar)
+  custom:baz = +other(baz)

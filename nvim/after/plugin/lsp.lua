@@ -1,4 +1,4 @@
-lsp_zero = require("lsp-zero")
+local lsp_zero = require("lsp-zero")
 
 lsp_zero.preset("recommended")
 
@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local opts = {buffer = event.buf}
 
     vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
+    vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({border = 'rounded'}) end, opts)
     vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
     vim.keymap.set('n', '<leader>vd', function() vim.diagnostic.open_float() end, opts)
     vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
@@ -35,10 +35,11 @@ require('mason').setup({
     }
 })
 
+-- Mason lsp config
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here 
   -- with the ones you want to install
-  ensure_installed = {'clangd', 'ts_ls', 'rust_analyzer', 'pyright', "lua_ls"},
+  ensure_installed = {'clangd', 'ts_ls', 'rust_analyzer', 'pyright', "lua_ls", "verible"},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
@@ -50,13 +51,19 @@ require('mason-lspconfig').setup({
   },
 })
 
+require("lspconfig").qmlls.setup {
+  cmd = {"qmlls6"}
+}
 
+-- Mason install debugger adapters 
+require("mason-nvim-dap").setup({
+    ensure_installed = { "codelldb" }
+})
+
+-- LSP selections keybindings
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
-require('luasnip.loaders.from_vscode').lazy_load()
-
--- LSP selections keybindings
 cmp.setup({
   sources = {
     {name = 'path'},
@@ -76,3 +83,36 @@ cmp.setup({
     end,
   },
 })
+
+-- Setup autoclose 
+require("autoclose").setup()
+
+-- Snippets
+local ls = require('luasnip')
+require('luasnip.loaders.from_vscode').lazy_load()
+
+ls.config.set_config {
+    history = true,
+    updateevents = "TextChanged,TextChangedI",
+}
+
+vim.keymap.set({'i', 's'}, '<C-k>', function()
+    if ls.expand_or_jumpable() then
+        ls.expand_or_jump()
+    end
+end, { silent = true })
+
+vim.keymap.set({'i', 's'}, '<C-j>', function()
+    if ls.jumpable(-1) then
+        ls.jump(-1)
+    end
+end, { silent = true })
+
+vim.keymap.set('i', '<C-l>', function()
+    if ls.choice_active() then
+        ls.change_choice(1)
+    end
+end, { silent = true })
+
+vim.keymap.set('n', '<leader><leader>s', '<cmd> source ~/.config/nvim/after/plugin/luasnip.lua<CR>')
+

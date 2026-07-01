@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry>
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>plualt</name>
+        <shortDescription>PL+</shortDescription>
+        <description>Polish (AltGr extended)</description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>basic</name>
+            <description>Polish AltGr with dead diaeresis</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>
+

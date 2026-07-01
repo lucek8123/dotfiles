@@ -7,7 +7,8 @@ const WorkspaceButton = (buttonNumber: number) => {
         return Widget.Label({
             class_names: activeId.as(i => [i === buttonNumber ? "active" : "", "workspaceLabel"]),
             label: `${buttonNumber}`,
-            vpack: "center",
+            hexpand: false,
+            hpack: "start",
         })
     }
         
@@ -30,6 +31,7 @@ export default () => {
 
     return Widget.Box({
         spacing: 5,
+        vertical: true,
         className: "workspaces",
         children: workspaces,
     })

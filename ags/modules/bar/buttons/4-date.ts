@@ -1,10 +1,24 @@
-const date = Variable("", {
-    poll: [1000, 'date "+%a, %d %b  %H:%M"'],
+const hour = Variable("", {
+    poll: [1000, 'date "+%H"'],
+})
+
+const minute = Variable("", {
+    poll: [1000, 'date "+%M"'],
 })
 
 export default () => {
-    return Widget.Label({
+    return Widget.Box({
         className: "date",
-        label: date.bind()
+        vertical: true,
+        children: [
+            Widget.Label({
+                className: "date-hour",
+                label: hour.bind()
+            }),
+            Widget.Label({
+                className: "date-minute",
+                label: minute.bind()
+            })
+        ]
     })
 }

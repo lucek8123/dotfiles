@@ -1,19 +1,15 @@
 .bar {
   padding: 1px;
-  margin: 10px 10px 0px 10px;
+  min-width: 45px;
 }
 
 * {
   transition: all .2s ease-in-out;
   font-family: "NotoSans Nerd Font";
   /* min-width: 10px; */
-  font-size: 15px;
-  font-weight: bold;
 }
 
-.bar-left,
-.bar-middle,
-.bar-right {
+.bar {
   border: solid;
   border-radius: 10px;
   border-color: #57b1de; 
@@ -21,17 +17,23 @@
   background-color: #181926;
 }
 
+.bar-right {
+  margin: 5px 0px;
+}
+
 .workspaceLabel.active {
-  min-width: 40px;
+  border-color: white;
+  min-height: 90px;
 }
 
 .workspaceLabel {
-   min-height: 25px;
-   min-width: 25px;
-   font-size: 12px;
-   background-color: skyblue;
+   min-height: 15px;
+   min-width: 15px;
+   font-size: 0px;
    border-radius: 30px;
-   padding: 0px;
+   border-width: 2.5px;
+   border-color: gray;
+   border-style: solid;
 }
 
 .arch-logo,
@@ -41,31 +43,39 @@
 .tray-icons-box,
 .update-icon,
 .audio,
+.network,
 .battery-box {
-  margin: 0 10px;
+  margin: 5px 0px;
 }
 
 .arch-logo {
   font-size: 25px;
   color: #57b1de;
-  /* padding: 0 15px; */
 }
 
-/* .workspaceLabel { */
-/*   padding: 0px 15px; */
-/* } */
-/**/
-/* .workspaceLabel.active { */
-/*   padding: 0px 25px; */
-/* } */
-/**/
-/* .arch-logo, */
-/* .now-playing, */
-/* .tray-icons-box, */
-/* .update-icon, */
-/* .audio,  */
-/* .date, */
-/* .battery-box { */
-/*   padding: 0 10px; */
-/* } */
+.date {
+  background: #51576d;
+  padding: 5px;
+  border-radius: 5px;
+}
 
+.date-minute {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date-hour {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.battery-label,
+.audioLabel {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+separator {
+  background: gray;
+  min-height: 1px;
+}
