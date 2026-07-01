@@ -92,6 +92,21 @@ local plugins = {
         build = 'npm add -g live-server',
         cmd = { 'LiveServerStart', 'LiveServerStop' },
         config = true
+    },
+
+    -- Auto colorscheme
+    {
+        "f-person/auto-dark-mode.nvim",
+        opts = {
+            set_dark_mode = function()
+                ColorMyPencils("catppuccin-macchiato")
+            end,
+            set_light_mode = function()
+                ColorMyPencils("catppuccin-latte")
+            end,
+            update_interval = 3000,
+            fallback = "dark"
+        }
     }
 
 
