@@ -11,7 +11,7 @@ xkb_symbols "basic" {
 
     include "latin"
 
-    name[Group1]="Polish (de)";
+    name[Group1]="Polish";
 
     key <TLDE>	{ [     grave, asciitilde,      notsign,    logicalor ]	};
     key <AE01>	{ [         1,     exclam,     notequal,   exclamdown ]	};
@@ -58,4 +58,4 @@ xkb_symbols "basic" {
     include "kpdl(comma)"
 
     include "level3(ralt_switch)"
-}
+};
