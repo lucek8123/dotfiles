@@ -1,7 +1,3 @@
-local lsp_zero = require("lsp-zero")
-
-lsp_zero.preset("recommended")
-
 -- LSP keybindings
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
@@ -35,25 +31,52 @@ require('mason').setup({
     }
 })
 
--- Mason lsp config
-require('mason-lspconfig').setup({
-  -- Replace the language servers listed here 
-  -- with the ones you want to install
-  ensure_installed = {'clangd', 'ts_ls', 'rust_analyzer', 'pyright', "lua_ls", "verible"},
-  handlers = {
-    function(server_name)
-      require('lspconfig')[server_name].setup({})
-    end,
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-  },
+-- Completion capabilities shared by every language server
+vim.lsp.config('*', {
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
-require("lspconfig").qmlls.setup {
-  cmd = {"qmlls6"}
-}
+-- Make lua_ls aware of the Neovim runtime and config
+local runtime_path = vim.split(package.path, ';')
+table.insert(runtime_path, 'lua/?.lua')
+table.insert(runtime_path, 'lua/?/init.lua')
+
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      telemetry = { enable = false },
+      runtime = {
+        version = 'LuaJIT',
+        path = runtime_path,
+      },
+      diagnostics = {
+        globals = { 'vim' }
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.fn.expand('$VIMRUNTIME/lua'),
+          vim.fn.stdpath('config') .. '/lua',
+        }
+      },
+    }
+  }
+})
+
+-- qmlls ships as `qmlls6` on some systems
+vim.lsp.config('qmlls', {
+  cmd = { 'qmlls6' }
+})
+
+-- Mason installs missing servers and automatically enables installed ones
+require('mason-lspconfig').setup({
+  ensure_installed = {'clangd', 'ts_ls', 'rust_analyzer', 'pyright', "lua_ls", "verible"},
+})
+
+-- qmlls is not managed by Mason, so enable it explicitly when available
+if vim.fn.executable('qmlls6') == 1 then
+  vim.lsp.enable('qmlls')
+end
 
 -- Mason install debugger adapters 
 require("mason-nvim-dap").setup({
@@ -115,4 +138,3 @@ vim.keymap.set('i', '<C-l>', function()
 end, { silent = true })
 
 vim.keymap.set('n', '<leader><leader>s', '<cmd> source ~/.config/nvim/after/plugin/luasnip.lua<CR>')
-

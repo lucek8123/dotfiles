@@ -29,8 +29,9 @@ local plugins = {
     -- Treesitter
     {
         'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        build = ':TSUpdate',
     },
-    build = ':TSUpdate',
 
     -- Harpoon
     { "theprimeagen/harpoon" },
@@ -46,13 +47,11 @@ local plugins = {
 
     -- LSP
     {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = "v3.x",
+        'neovim/nvim-lspconfig',
         dependencies = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            {'mason-org/mason.nvim'},
+            {'mason-org/mason-lspconfig.nvim'},
 
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
